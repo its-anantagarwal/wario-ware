@@ -1,3 +1,70 @@
 [gd_scene format=3 uid="uid://bshsdvuac8j2g"]
 
+[ext_resource type="Script" uid="uid://b4yo3n1djkfv0" path="res://timer_screen.gd" id="1_3mivm"]
+[ext_resource type="Texture2D" uid="uid://cvte5q5rhf75v" path="res://GameBackground.png" id="1_187gu"]
+[ext_resource type="Texture2D" uid="uid://dv4h84i0dubmq" path="res://garlic.png" id="2_3mivm"]
+
 [node name="level_scene" type="Node2D" unique_id=1460177713]
+script = ExtResource("1_3mivm")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1418615670]
+offset_right = 1153.0
+offset_bottom = 649.0
+texture = ExtResource("1_187gu")
+expand_mode = 1
+
+[node name="GarlicContainer" type="HBoxContainer" parent="." unique_id=904583420]
+offset_left = 256.0
+offset_top = 105.0
+offset_right = 912.0
+offset_bottom = 233.0
+
+[node name="Garlic1" type="TextureRect" parent="GarlicContainer" unique_id=860299494]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_3mivm")
+expand_mode = 1
+
+[node name="Garlic2" type="TextureRect" parent="GarlicContainer" unique_id=794298380]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_3mivm")
+expand_mode = 1
+
+[node name="Garlic3" type="TextureRect" parent="GarlicContainer" unique_id=727506388]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_3mivm")
+expand_mode = 1
+
+[node name="Garlic4" type="TextureRect" parent="GarlicContainer" unique_id=2024312361]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_3mivm")
+expand_mode = 1
+
+[node name="Garlic5" type="TextureRect" parent="GarlicContainer" unique_id=1660479659]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_3mivm")
+expand_mode = 1
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=1562541222]
+clip_contents = false
+offset_left = 491.0
+offset_top = 295.0
+offset_right = 678.0
+offset_bottom = 352.0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 42
+text = "Level #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=452453096]
+clip_contents = false
+offset_left = 526.0
+offset_top = 474.0
+offset_right = 625.0
+offset_bottom = 539.0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
