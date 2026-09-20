@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bx7khqk5fripq"]
+
+[ext_resource type="Script" uid="uid://bl3t20r4o8fiv" path="res://title_screen.gd" id="1_ak2if"]
+[ext_resource type="Texture2D" uid="uid://cvte5q5rhf75v" path="res://GameBackground.png" id="1_v6p8y"]
+
+[node name="TitleScreen" type="Node2D" unique_id=2013735157]
+script = ExtResource("1_ak2if")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1370202200]
+offset_right = 1153.1647
+offset_bottom = 649.0
+texture = ExtResource("1_v6p8y")
+expand_mode = 1
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=738549231]
+clip_contents = false
+offset_left = 245.0
+offset_top = 107.0
+offset_right = 966.0
+offset_bottom = 255.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "WARIO WARE"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1650521661]
+offset_left = 480.0
+offset_top = 261.0
+offset_right = 704.0
+offset_bottom = 510.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1902016103]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 26
+text = "START"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1858759377]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 26
+text = "SETTINGS"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=759831548]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 26
+text = "QUIT"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

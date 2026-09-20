@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="wario ware"
+run/main_scene="uid://bx7khqk5fripq"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
