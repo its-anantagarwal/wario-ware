@@ -11,3 +11,4 @@ offset_right = 121.0
 offset_bottom = 66.0
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/normal_font_size = 42
+text = "0.0"

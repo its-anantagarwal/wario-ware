@@ -15,11 +15,11 @@ func _ready() -> void:
 	
 	if Global.minigames_done < 3:
 		Global.minigames_done = Global.minigames_done +1
-		get_tree().change_scene_to_file("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn")
+		get_tree().change_scene_to_file("res://minigame_" + str(Global.minigames_done) + ".tscn")
 
 
 	else:
-		get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
+		get_tree().change_scene_to_file("res://title_screen.tscn")
 	
 
 func _process(delta: float) -> void:
