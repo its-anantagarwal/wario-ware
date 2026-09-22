@@ -13,16 +13,17 @@ var time
 func _ready() -> void:
 	await Timer(5.0)
 	
-	if Global.minigames_done < 3:
+	if Global.minigames_done < 2:
 		Global.minigames_done = Global.minigames_done +1
 		get_tree().change_scene_to_file("res://minigame_" + str(Global.minigames_done) + ".tscn")
 
 
 	else:
-		get_tree().change_scene_to_file("res://title_screen.tscn")
+		get_tree().change_scene_to_file("res://done_screen.tscn")
 	
 
 func _process(delta: float) -> void:
+	level.text = "Level " + str(Global.minigames_done)
 	match Global.lives: 
 
 		4:
@@ -41,9 +42,10 @@ func _process(delta: float) -> void:
 			garlic_4.hide()
 		0:
 			garlic_container.hide()
+			get_tree().change_scene_to_file("res://death_screen.tscn")
 	
 	timer.text = str(time)
-	level.text = "Level " + str(Global.minigames_done)
+	
 
 func Timer(start_time: float):
 	time = start_time
