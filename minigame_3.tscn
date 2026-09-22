@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://bekkjwe87wi0b"]
+
+[ext_resource type="Script" uid="uid://d1yefkqafwl8w" path="res://minigame_3.gd" id="1_elj0y"]
+[ext_resource type="Texture2D" uid="uid://cde6wi5dm8fy4" path="res://house_inside.PNG" id="1_t3ksd"]
+[ext_resource type="Script" uid="uid://dd38mmlryo40h" path="res://fly.gd" id="2_1i1uu"]
+[ext_resource type="Script" uid="uid://b24adjnlc3ufw" path="res://racket.gd" id="2_33dbb"]
+[ext_resource type="Texture2D" uid="uid://dlaxcmwj07isd" path="res://normal_racket.png" id="2_gqi5c"]
+[ext_resource type="Texture2D" uid="uid://or68b3yuvkbv" path="res://FlySpriteSheet.png" id="3_0abbc"]
+[ext_resource type="Texture2D" uid="uid://bpo531e1x4t4i" path="res://hitting_racket.png" id="3_5xr8p"]
+[ext_resource type="PackedScene" uid="uid://bftsqahqticxe" path="res://minigame_timer.tscn" id="8_jqvox"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0abbc"]
+radius = 29.017237
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elj0y"]
+atlas = ExtResource("3_0abbc")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqvox"]
+atlas = ExtResource("3_0abbc")
+region = Rect2(192, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpvao"]
+atlas = ExtResource("3_0abbc")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txmog"]
+atlas = ExtResource("3_0abbc")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sil2"]
+atlas = ExtResource("3_0abbc")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v0ru"]
+atlas = ExtResource("3_0abbc")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq1sh"]
+atlas = ExtResource("3_0abbc")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igt4t"]
+atlas = ExtResource("3_0abbc")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_684sj"]
+atlas = ExtResource("3_0abbc")
+region = Rect2(192, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_77bst"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elj0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqvox")
+}],
+"loop": 0,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpvao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txmog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sil2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4v0ru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq1sh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igt4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_684sj")
+}],
+"loop": 2,
+"name": &"flying",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1i1uu"]
+radius = 59.682495
+
+[node name="minigame_3" type="Node2D" unique_id=550699449]
+script = ExtResource("1_elj0y")
+
+[node name="Background" type="TextureRect" parent="." unique_id=382814482]
+offset_right = 1155.5555
+offset_bottom = 650.0
+texture = ExtResource("1_t3ksd")
+expand_mode = 1
+
+[node name="fly1" type="Area2D" parent="." unique_id=1371585277]
+position = Vector2(316, 210)
+script = ExtResource("2_1i1uu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fly1" unique_id=1871529137]
+position = Vector2(1, 22)
+shape = SubResource("CircleShape2D_0abbc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="fly1" unique_id=1504628467]
+texture_filter = 1
+scale = Vector2(2.9374995, 2.9374995)
+sprite_frames = SubResource("SpriteFrames_77bst")
+animation = &"flying"
+autoplay = "flying"
+frame_progress = 0.3377894
+
+[node name="fly2" type="Area2D" parent="." unique_id=1410338309]
+position = Vector2(1029, 486)
+script = ExtResource("2_1i1uu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fly2" unique_id=127760772]
+position = Vector2(1, 22)
+shape = SubResource("CircleShape2D_0abbc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="fly2" unique_id=974659457]
+texture_filter = 1
+scale = Vector2(2.9374995, 2.9374995)
+sprite_frames = SubResource("SpriteFrames_77bst")
+animation = &"flying"
+autoplay = "flying"
+frame_progress = 0.69537055
+
+[node name="fly3" type="Area2D" parent="." unique_id=878316741]
+position = Vector2(393, 571)
+script = ExtResource("2_1i1uu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fly3" unique_id=100074388]
+position = Vector2(1, 22)
+shape = SubResource("CircleShape2D_0abbc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="fly3" unique_id=728229768]
+texture_filter = 1
+scale = Vector2(2.9374995, 2.9374995)
+sprite_frames = SubResource("SpriteFrames_77bst")
+animation = &"flying"
+autoplay = "flying"
+frame_progress = 0.69537055
+
+[node name="racket" type="Area2D" parent="." unique_id=30301288]
+position = Vector2(221, 133)
+script = ExtResource("2_33dbb")
+
+[node name="normal_racket" type="Sprite2D" parent="racket" unique_id=1908034069]
+position = Vector2(0, -8.34465e-07)
+scale = Vector2(0.26637283, 0.2663729)
+texture = ExtResource("2_gqi5c")
+
+[node name="hitting_racket" type="Sprite2D" parent="racket" unique_id=1985761298]
+visible = false
+position = Vector2(-1.4305115e-06, -1.7881393e-06)
+scale = Vector2(0.30415162, 0.30415162)
+texture = ExtResource("3_5xr8p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="racket" unique_id=1424928752]
+position = Vector2(31, -51)
+shape = SubResource("CircleShape2D_1i1uu")
+
+[node name="MinigameTimer" parent="." unique_id=1744183757 instance=ExtResource("8_jqvox")]
+position = Vector2(53, 44)
