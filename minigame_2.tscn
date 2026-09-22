@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cx6gwq54l162q"]
+
+[ext_resource type="Script" uid="uid://7jc1q1ftntox" path="res://minigame_2.gd" id="1_5x31c"]
+[ext_resource type="Texture2D" uid="uid://ca6k2stw7qgy6" path="res://tilesetOpenGameBackground.png" id="1_ksr4o"]
+[ext_resource type="Script" uid="uid://bypkcmrvylyn3" path="res://button_minigame_2.gd" id="3_3qiw4"]
+[ext_resource type="PackedScene" uid="uid://bftsqahqticxe" path="res://minigame_timer.tscn" id="4_gc66t"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n6gid"]
+load_path = "res://.godot/imported/garlic.png-0e25d41bf777f8e3e0af02ed567ad3c3.ctex"
+
+[node name="minigame_2" type="Node2D" unique_id=613615147]
+script = ExtResource("1_5x31c")
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=1249632461]
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollingBackground" unique_id=1770796248]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_ksr4o")
+
+[node name="button_1" type="TextureButton" parent="." unique_id=1185988952]
+offset_left = 134.0
+offset_top = 442.0
+offset_right = 244.0
+offset_bottom = 552.0
+texture_normal = SubResource("CompressedTexture2D_n6gid")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_3qiw4")
+
+[node name="button_2" type="TextureButton" parent="." unique_id=575116177]
+offset_left = 370.0
+offset_top = 98.0
+offset_right = 480.0
+offset_bottom = 208.0
+texture_normal = SubResource("CompressedTexture2D_n6gid")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_3qiw4")
+
+[node name="button_3" type="TextureButton" parent="." unique_id=2019765061]
+offset_left = 812.0
+offset_top = 59.0
+offset_right = 922.0
+offset_bottom = 169.0
+texture_normal = SubResource("CompressedTexture2D_n6gid")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_3qiw4")
+
+[node name="button_4" type="TextureButton" parent="." unique_id=1723739306]
+offset_left = 569.0
+offset_top = 363.0
+offset_right = 679.0
+offset_bottom = 473.0
+texture_normal = SubResource("CompressedTexture2D_n6gid")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_3qiw4")
+
+[node name="button_5" type="TextureButton" parent="." unique_id=640403415]
+offset_left = 928.0
+offset_top = 425.0
+offset_right = 1038.0
+offset_bottom = 535.0
+texture_normal = SubResource("CompressedTexture2D_n6gid")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_3qiw4")
+
+[node name="MinigameTimer" parent="." unique_id=1744183757 instance=ExtResource("4_gc66t")]
+position = Vector2(53, 44)
+
+[connection signal="pressed" from="button_1" to="button_1" method="_on_pressed"]
+[connection signal="pressed" from="button_2" to="button_2" method="_on_pressed"]
+[connection signal="pressed" from="button_3" to="button_3" method="_on_pressed"]
+[connection signal="pressed" from="button_4" to="button_4" method="_on_pressed"]
+[connection signal="pressed" from="button_5" to="button_5" method="_on_pressed"]
