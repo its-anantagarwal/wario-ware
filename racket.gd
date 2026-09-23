@@ -21,7 +21,7 @@ func swing():
 	$hitting_racket.visible = true
 	
 	var areas= get_overlapping_areas()
-	
+	 
 	for area in areas:
 		if area.name == "fly1" or area.name == "fly2" or area.name == "fly3":
 			area.die()

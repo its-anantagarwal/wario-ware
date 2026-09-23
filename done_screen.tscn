@@ -1,13 +1,162 @@
 [gd_scene format=3 uid="uid://ciosapo3s86h2"]
 
+[ext_resource type="Texture2D" uid="uid://bxx5rjfiw18qv" path="res://winning_screen_background.png" id="1_mioa6"]
+[ext_resource type="FontFile" uid="uid://cpov7ojdo5sl4" path="res://ScrollPixel.ttf" id="2_i8ovo"]
+[ext_resource type="Texture2D" uid="uid://dnarfae0lcjps" path="res://dancing_sprite_skipping.png" id="3_o67xc"]
+[ext_resource type="Texture2D" uid="uid://blcik4vhcsr7u" path="res://dancing_sprite_sliding.png" id="4_cr8un"]
+[ext_resource type="Script" uid="uid://tukl4qkr2xj1" path="res://dancing_sprite.gd" id="5_o67xc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0dng"]
+atlas = ExtResource("3_o67xc")
+region = Rect2(0, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jaqvx"]
+atlas = ExtResource("3_o67xc")
+region = Rect2(39, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4u45"]
+atlas = ExtResource("3_o67xc")
+region = Rect2(78, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mei7x"]
+atlas = ExtResource("3_o67xc")
+region = Rect2(117, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wy0in"]
+atlas = ExtResource("3_o67xc")
+region = Rect2(156, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrtpw"]
+atlas = ExtResource("3_o67xc")
+region = Rect2(195, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1kgc"]
+atlas = ExtResource("3_o67xc")
+region = Rect2(234, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcu2x"]
+atlas = ExtResource("3_o67xc")
+region = Rect2(273, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g0v3"]
+atlas = ExtResource("4_cr8un")
+region = Rect2(0, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqbgg"]
+atlas = ExtResource("4_cr8un")
+region = Rect2(39, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qeoo"]
+atlas = ExtResource("4_cr8un")
+region = Rect2(78, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exka3"]
+atlas = ExtResource("4_cr8un")
+region = Rect2(117, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1edu"]
+atlas = ExtResource("4_cr8un")
+region = Rect2(156, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i14eq"]
+atlas = ExtResource("4_cr8un")
+region = Rect2(195, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7118j"]
+atlas = ExtResource("4_cr8un")
+region = Rect2(234, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqok5"]
+atlas = ExtResource("4_cr8un")
+region = Rect2(273, 0, 39, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j0tas"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0dng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jaqvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4u45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mei7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wy0in")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrtpw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1kgc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcu2x")
+}],
+"loop": 1,
+"name": &"skipping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g0v3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqbgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qeoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exka3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1edu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i14eq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7118j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqok5")
+}],
+"loop": 1,
+"name": &"sliding",
+"speed": 5.0
+}]
+
 [node name="done_screen" type="Node2D" unique_id=584495868]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1849760794]
+[node name="background" type="TextureRect" parent="." unique_id=1557090392]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_mioa6")
+expand_mode = 1
+
+[node name="main_title" type="RichTextLabel" parent="." unique_id=1849760794]
 clip_contents = false
-offset_left = 359.0
-offset_top = 314.0
-offset_right = 618.0
-offset_bottom = 387.0
-theme_override_constants/outline_size = 20
-theme_override_font_sizes/normal_font_size = 42
-text = "YOU WON"
+offset_left = 1.0
+offset_top = 69.0
+offset_right = 1153.0
+offset_bottom = 185.0
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("2_i8ovo")
+theme_override_font_sizes/normal_font_size = 81
+text = "YOU SURVIVED"
+horizontal_alignment = 1
+
+[node name="dancing_sprite" type="AnimatedSprite2D" parent="." unique_id=1130259342]
+texture_filter = 1
+position = Vector2(1062.375, 221.40704)
+scale = Vector2(1.6730767, 1.6730766)
+sprite_frames = SubResource("SpriteFrames_j0tas")
+animation = &"sliding"
+autoplay = "skipping"
+frame_progress = 0.61774874
+script = ExtResource("5_o67xc")
