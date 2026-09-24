@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if position.x<centre_x:
-		position.x +=100*delta
+		position.x +=speed*delta
 	else:
 		position.x = centre_x
 		$".".play("sliding")

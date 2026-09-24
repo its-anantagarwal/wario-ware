@@ -618,7 +618,7 @@ scale = Vector2(1.6730767, 1.6730766)
 sprite_frames = SubResource("SpriteFrames_j0tas")
 animation = &"sliding"
 autoplay = "skipping"
-frame_progress = 0.073681794
+frame_progress = 0.27305984
 script = ExtResource("5_o67xc")
 
 [node name="subtitle" type="RichTextLabel" parent="." unique_id=1152625541]

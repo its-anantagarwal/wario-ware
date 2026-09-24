@@ -1,6 +1,6 @@
 extends Node2D
 @onready var themed_timer: Node2D = $MinigameTimer
-# ^^^ You dragged this in the scene by the way 
+
 
 
 
