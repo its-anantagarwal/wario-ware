@@ -1,9 +1,12 @@
 # MICRO MAYHEM
+<img width="813" height="166" alt="Screenshot 2026-09-25 203831" src="https://github.com/user-attachments/assets/b6f1ddbc-50aa-439d-9780-251f5c3b4b9b" />
+
 
 A collection of mini games, where your goal is to survive till the end.
 
 ## Play the Game 🎮
 
+https://anant-agarwal.itch.io/micro-mayhem
 
 ## How to Play 🕹️
 
