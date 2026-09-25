@@ -17,13 +17,13 @@ expand_mode = 1
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=738549231]
 clip_contents = false
-offset_left = 245.0
+offset_left = 1.0
 offset_top = 107.0
-offset_right = 966.0
+offset_right = 1152.0
 offset_bottom = 255.0
 theme_override_constants/outline_size = 40
-theme_override_font_sizes/normal_font_size = 108
-text = "MINI WARE"
+theme_override_font_sizes/normal_font_size = 90
+text = "MICRO MAYHEM"
 horizontal_alignment = 1
 
 [node name="Buttons" type="VBoxContainer" parent="." unique_id=1650521661]
