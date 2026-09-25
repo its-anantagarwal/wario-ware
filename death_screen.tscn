@@ -308,7 +308,7 @@ scale = Vector2(4.53125, 4.53125)
 sprite_frames = SubResource("SpriteFrames_j0tas")
 animation = &"run"
 autoplay = "run"
-frame_progress = 0.62740487
+frame_progress = 0.13848212
 script = ExtResource("6_7ahhq")
 
 [node name="restart" type="Button" parent="other_nodes" unique_id=1246689434]
