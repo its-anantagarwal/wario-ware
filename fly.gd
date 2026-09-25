@@ -2,6 +2,7 @@ extends Area2D
 
 var speed = 150
 var direction = Vector2.ZERO
+var alive = true
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("flying")
@@ -37,6 +38,9 @@ func _process(delta: float) -> void:
 
 
 func die():
-	direction = Vector2.ZERO
-	$AnimatedSprite2D.play("dead")
-	get_parent().flies_alive-=1
+	if alive:
+		direction = Vector2.ZERO
+		$AnimatedSprite2D.play("dead")
+		get_parent().flies_alive-=1
+		alive = false
+	
