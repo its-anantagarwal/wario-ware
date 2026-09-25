@@ -19,7 +19,7 @@ func _ready() -> void:
 	await get_tree().create_timer(2.5).timeout
 	fading_in = true
 	
-	#restart_button.modulate.a=0.0
+	
 	$other_nodes/Character/death_screen_character.speech_finished.connect(_on_speech_finished)
 	
 	
