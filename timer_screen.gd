@@ -10,9 +10,7 @@ extends Node2D
 
 var time
 
-func _ready() -> void:
-	#await Timer(5.0)
-	
+func _ready() -> void:	
 	if Global.minigames_done < 3:
 		Global.minigames_done = Global.minigames_done +1
 		await Timer(5.0)

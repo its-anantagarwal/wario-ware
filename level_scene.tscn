@@ -21,33 +21,33 @@ offset_bottom = 233.0
 
 [node name="Garlic1" type="TextureRect" parent="GarlicContainer" unique_id=860299494]
 layout_mode = 2
-size_flags_horizontal = 3
 texture = ExtResource("2_3mivm")
-expand_mode = 1
+expand_mode = 3
+stretch_mode = 4
 
 [node name="Garlic2" type="TextureRect" parent="GarlicContainer" unique_id=794298380]
 layout_mode = 2
-size_flags_horizontal = 3
 texture = ExtResource("2_3mivm")
-expand_mode = 1
+expand_mode = 3
+stretch_mode = 4
 
 [node name="Garlic3" type="TextureRect" parent="GarlicContainer" unique_id=727506388]
 layout_mode = 2
-size_flags_horizontal = 3
 texture = ExtResource("2_3mivm")
-expand_mode = 1
+expand_mode = 3
+stretch_mode = 4
 
 [node name="Garlic4" type="TextureRect" parent="GarlicContainer" unique_id=2024312361]
 layout_mode = 2
-size_flags_horizontal = 3
 texture = ExtResource("2_3mivm")
-expand_mode = 1
+expand_mode = 3
+stretch_mode = 4
 
 [node name="Garlic5" type="TextureRect" parent="GarlicContainer" unique_id=1660479659]
 layout_mode = 2
-size_flags_horizontal = 3
 texture = ExtResource("2_3mivm")
-expand_mode = 1
+expand_mode = 3
+stretch_mode = 4
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=1562541222]
 clip_contents = false
