@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bl3t20r4o8fiv" path="res://title_screen.gd" id="1_ak2if"]
 [ext_resource type="Texture2D" uid="uid://cvte5q5rhf75v" path="res://GameBackground.png" id="1_v6p8y"]
+[ext_resource type="FontFile" uid="uid://bugmv408w70f" path="res://Attomic.ttf" id="3_hafda"]
+[ext_resource type="FontFile" uid="uid://c0wg6a21dojof" path="res://NanoPlus.ttf" id="4_tpml5"]
+[ext_resource type="FontFile" uid="uid://yqftivwysh1" path="res://PixelSans.ttf" id="5_jqemp"]
 
 [node name="TitleScreen" type="Node2D" unique_id=2013735157]
 script = ExtResource("1_ak2if")
@@ -23,30 +26,144 @@ theme_override_font_sizes/normal_font_size = 108
 text = "MINI WARE"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1650521661]
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=1650521661]
 offset_left = 480.0
 offset_top = 261.0
 offset_right = 704.0
 offset_bottom = 510.0
 
-[node name="Start" type="Button" parent="VBoxContainer" unique_id=1902016103]
+[node name="Start" type="Button" parent="Buttons" unique_id=1902016103]
 layout_mode = 2
 theme_override_constants/outline_size = 16
 theme_override_font_sizes/font_size = 26
 text = "START"
 
-[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1858759377]
+[node name="Settings" type="Button" parent="Buttons" unique_id=1858759377]
 layout_mode = 2
 theme_override_constants/outline_size = 16
 theme_override_font_sizes/font_size = 26
 text = "CONTROLS"
 
-[node name="Quit" type="Button" parent="VBoxContainer" unique_id=759831548]
+[node name="Quit" type="Button" parent="Buttons" unique_id=759831548]
 layout_mode = 2
 theme_override_constants/outline_size = 16
 theme_override_font_sizes/font_size = 26
 text = "QUIT"
 
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="Controls" type="Panel" parent="." unique_id=84591373]
+visible = false
+offset_left = 249.0
+offset_top = 117.0
+offset_right = 959.0
+offset_bottom = 561.0
+
+[node name="ColorRect" type="ColorRect" parent="Controls" unique_id=1775998553]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="title" type="RichTextLabel" parent="Controls" unique_id=1511085508]
+clip_contents = false
+layout_mode = 0
+offset_right = 710.0
+offset_bottom = 84.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("3_hafda")
+theme_override_font_sizes/normal_font_size = 90
+text = "CONTROLS"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="CloseControls" type="Button" parent="Controls" unique_id=1023941353]
+layout_mode = 0
+offset_left = 628.0
+offset_top = 8.0
+offset_right = 702.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("3_hafda")
+theme_override_font_sizes/font_size = 70
+text = "X"
+
+[node name="MarginContainer" type="MarginContainer" parent="Controls" unique_id=658808517]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Controls/MarginContainer" unique_id=1858219367]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls/MarginContainer/ScrollContainer" unique_id=868810408]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Minigame1" type="RichTextLabel" parent="Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=487034459]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_tpml5")
+theme_override_font_sizes/normal_font_size = 39
+text = "Minigame 1"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Minigame1Controls" type="RichTextLabel" parent="Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=311999264]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_jqemp")
+theme_override_font_sizes/normal_font_size = 26
+text = "Left -  W or left (Physical)
+Right - D or right (Physical)
+Jump - Space"
+fit_content = true
+
+[node name="Minigame2" type="RichTextLabel" parent="Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1412087593]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_tpml5")
+theme_override_font_sizes/normal_font_size = 39
+text = "Minigame 2"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Minigame2Controls" type="RichTextLabel" parent="Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1096787236]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_jqemp")
+theme_override_font_sizes/normal_font_size = 26
+text = "Click Button - Left Mouse Button (LMB)"
+fit_content = true
+
+[node name="Minigame3" type="RichTextLabel" parent="Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1548965595]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_tpml5")
+theme_override_font_sizes/normal_font_size = 39
+text = "Minigame 3"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Minigame3Controls" type="RichTextLabel" parent="Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2136184495]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_jqemp")
+theme_override_font_sizes/normal_font_size = 26
+text = "Use Racket - Left Mouse Button (LMB)"
+fit_content = true
+
+[connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Controls/CloseControls" to="." method="_on_close_controls_pressed"]
