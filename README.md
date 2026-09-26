@@ -1,98 +1,54 @@
 # MICRO MAYHEM
 <img width="813" height="166" alt="Screenshot 2026-09-25 203831" src="https://github.com/user-attachments/assets/b6f1ddbc-50aa-439d-9780-251f5c3b4b9b" />
 
-
 A collection of mini games, where your goal is to survive till the end.
 
-## Play the Game 🎮
+## Play the game online
 
-https://anant-agarwal.itch.io/micro-mayhem
+itch.io https://anant-agarwal.itch.io/micro-mayhem
 
-## How to Play 🕹️
+## Controls
 
-The game is made up of several short mini-games. Each one gives you a simple objective that you have to complete before the time runs out.
+Move right - D or right arrow  
+Move left - A or left arrow  
+Jump - Space  
+Click - Left Mouse Button (LMB)  
+Move racket (3rd Minigame) - Mouse
 
-### Controls
+## Playable mini-games
 
-| Action | Control |
-|---|---|
-| Move | Arrow Keys / WASD |
-| Jump | Space |
-| Click / Interact | Left Mouse Button |
-| Move Racket | Mouse |
-| Hit Fly | Left Mouse Button |
+**1. Collect the floating garlics**
 
-## Mini-Games
+In this mini-game, you have to move the character and collect 3 garlic pods before the timer ends.
 
-### 1. Collect the Objects
+**2. Click the buttons**
 
-Quickly move your character around to collect all floating garlic pods before the time runs out.
+In this mini-game, you have to click all the buttons on the screen before the timer ends.
 
-### 2. Click the Buttons
+**3. Swat the fly**
 
-Click all the buttons on the screen before the time runs out.
+In this mini-game, you have to swat 3 flies with a racket before the timer ends.
 
-### 3. Swat the Bug
+## Features
 
-Three flies fly around the screen. You have to use your mouse controlled racket to click and swat all the flies, before the timer runs out.
+ - Fast paced mini-games under a timer
+ - A movable character
+ - Interactive mini-games
+ - Visual scenes
 
-## Features ✨
- - Fast paced mini-games
- - Different controls and objectives for each mini-game
- - Countdown timers
- - Custom winner and death screens
- - Custom game UI and controls panel
- - Pixel-art inspired visuals
- - Mouse-based gameplay
- - Quick and reaction-based gameplay
+## Credits and asset usage
 
-## Built With 
- - Godot 4
- - GDScript
+Some assets were made with the help of:  
+pixilart.com
 
-## How it Works 🔧
+External assets were obtained from:  
+itch.io  
+opengameart.org
 
-Each mini-game has its own gameplay logic, controls, timer, and win/lose conditions.
-The game switches between mini-games and checks whether the player successfully completes each challenge.
-If the player fails, a custom death screen is shown.
-Successfully completing the challenges leads to the custom winning screen.
+## AI usage
 
-## Assets and Credits 🎨
-
-This game was made using a combination of original work and assets and external assets.
-
-Creating original assets:
- - pixilart.com
-
-External assets were obtained from:
- - opengameart.org
- - itch.io
-
-## AI Usage 🤖
-
-AI was used for:
-
- - Debugging minute errors
- - Brainstorming mini-game ideas
-
-## What I Learned from this Project ✒️
-
-By doing this project, I learned to:
-
-- Build a complete game in Godot
-- Use GDScript for gameplay logic
-- Use sprites and animations
-- Handle input
-- Create timers and countdowns
-- Build UI using Control nodes and containers
-- Create custom win and death screens
-- Manage different game states
-- Debug problems while developing a game
-- Use github efficiently
-
-## Stardance 🚀
-
-This project was created for the **Make a WarioWare Game** mission.
+ - Slight debugging
+ - Brainstorming ideas for the mini-games
 
 ## Screenshots 🖼️
 
@@ -106,8 +62,4 @@ This project was created for the **Make a WarioWare Game** mission.
 <img width="1142" height="643" alt="image" src="https://github.com/user-attachments/assets/7e3a9a4c-bc49-4939-af83-268f217a95a5" />
 
 
-
-
-
-
-
+PS: This project was made for the **Make a WarioWare Game** mission.
