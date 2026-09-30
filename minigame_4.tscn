@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cnobpkgwa3qal"]
+
+[ext_resource type="PackedScene" uid="uid://cfk47d2nj8yus" path="res://cup.tscn" id="1_2th8j"]
+[ext_resource type="Script" uid="uid://bt6j0g7jtf5u3" path="res://minigame_4.gd" id="1_wae4i"]
+[ext_resource type="Texture2D" uid="uid://vftv2pxdeq4a" path="res://minigame_4_background.png" id="2_80u0h"]
+[ext_resource type="Script" uid="uid://clukjvvet470k" path="res://cup.gd" id="3_pb0mu"]
+[ext_resource type="Script" uid="uid://dudep7cfli27h" path="res://falling_object.gd" id="4_c5c30"]
+[ext_resource type="PackedScene" uid="uid://bftsqahqticxe" path="res://minigame_timer.tscn" id="6_yanj6"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pb0mu"]
+load_path = "res://.godot/imported/rocks_tileset.png-3256c1458dd4c3a22742383e1c0ddadd.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c5c30"]
+radius = 19.026299
+
+[node name="minigame_4" type="Node2D" unique_id=1793631946]
+script = ExtResource("1_wae4i")
+
+[node name="background" type="TextureRect" parent="." unique_id=1094266999]
+offset_left = -94.0
+offset_top = -119.0
+offset_right = 1468.8867
+offset_bottom = 990.0
+texture = ExtResource("2_80u0h")
+expand_mode = 1
+
+[node name="cup" parent="." unique_id=776444546 instance=ExtResource("1_2th8j")]
+position = Vector2(584, 484)
+scale = Vector2(1.7610786, 1.7610786)
+script = ExtResource("3_pb0mu")
+
+[node name="fallingObject" type="Area2D" parent="." unique_id=1733157722]
+visible = false
+position = Vector2(582, 95)
+scale = Vector2(0.5999994, 0.5999994)
+collision_layer = 2
+script = ExtResource("4_c5c30")
+
+[node name="Sprite2D" type="Sprite2D" parent="fallingObject" unique_id=1149957846]
+texture_filter = 1
+position = Vector2(-2, -4)
+scale = Vector2(4.1600013, 4.1600013)
+texture = SubResource("CompressedTexture2D_pb0mu")
+region_enabled = true
+region_rect = Rect2(802.88257, 196.789, 8.301392, 8.232452)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fallingObject" unique_id=1384551509]
+position = Vector2(-1, -2)
+shape = SubResource("CircleShape2D_c5c30")
+
+[node name="spawnTimer" type="Timer" parent="." unique_id=1672976034]
+wait_time = 0.8
+autostart = true
+
+[node name="MinigameTimer" parent="." unique_id=1744183757 instance=ExtResource("6_yanj6")]
+position = Vector2(53, 44)
+
+[connection signal="area_entered" from="fallingObject" to="fallingObject" method="_on_area_entered"]

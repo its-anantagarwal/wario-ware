@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cfk47d2nj8yus"]
+
+[ext_resource type="Texture2D" uid="uid://bgox7nf7lgiq6" path="res://empty_cup.png" id="1_hxhe5"]
+[ext_resource type="Script" uid="uid://fh2gugn53dan" path="res://water.gd" id="2_358bg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0tas"]
+size = Vector2(42.42795, 24.532448)
+
+[node name="cup" type="Node2D" unique_id=776444546]
+scale = Vector2(3.5463233, 3.5463233)
+
+[node name="cupSprite" type="Sprite2D" parent="." unique_id=675321648]
+texture_filter = 1
+scale = Vector2(2.21875, 2.21875)
+texture = ExtResource("1_hxhe5")
+
+[node name="water" type="Polygon2D" parent="." unique_id=1316785231]
+position = Vector2(-0.14850998, -0.270589)
+scale = Vector2(0.99333334, 1.010101)
+color = Color(0.72156864, 0.74509805, 0.8901961, 1)
+polygon = PackedVector2Array(-22.276592, 4.2297325, 20.304611, 4.1761565, 19.73686, 26.78831, -21.424969, 26.78831)
+script = ExtResource("2_358bg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1823759897]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1861378891]
+position = Vector2(-0.9112584, 15.9319935)
+shape = SubResource("RectangleShape2D_j0tas")
