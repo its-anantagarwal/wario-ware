@@ -10,7 +10,6 @@ func _process(delta):
 
 
 func _on_area_entered(area: Area2D) -> void:
-	print("HIT!")
 	var cup = area.get_parent()
 	if cup.has_method("hit"):
 		var hit_direction = sign(global_position.x - cup.global_position.x)

@@ -38,11 +38,17 @@ theme_override_constants/outline_size = 16
 theme_override_font_sizes/font_size = 26
 text = "START"
 
-[node name="Settings" type="Button" parent="Buttons" unique_id=1858759377]
+[node name="Controls" type="Button" parent="Buttons" unique_id=1858759377]
 layout_mode = 2
 theme_override_constants/outline_size = 16
 theme_override_font_sizes/font_size = 26
 text = "CONTROLS"
+
+[node name="HowToPlay" type="Button" parent="Buttons" unique_id=73126120]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 26
+text = "HOW TO PLAY"
 
 [node name="Quit" type="Button" parent="Buttons" unique_id=759831548]
 layout_mode = 2
@@ -50,14 +56,14 @@ theme_override_constants/outline_size = 16
 theme_override_font_sizes/font_size = 26
 text = "QUIT"
 
-[node name="Controls" type="Panel" parent="." unique_id=84591373]
+[node name="ControlsPanel" type="Panel" parent="." unique_id=84591373]
 visible = false
-offset_left = 249.0
+offset_left = 222.0
 offset_top = 117.0
-offset_right = 959.0
+offset_right = 932.0
 offset_bottom = 561.0
 
-[node name="ColorRect" type="ColorRect" parent="Controls" unique_id=1775998553]
+[node name="ColorRect" type="ColorRect" parent="ControlsPanel" unique_id=1775998553]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -66,7 +72,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="title" type="RichTextLabel" parent="Controls" unique_id=1511085508]
+[node name="title" type="RichTextLabel" parent="ControlsPanel" unique_id=1511085508]
 clip_contents = false
 layout_mode = 0
 offset_right = 710.0
@@ -78,7 +84,7 @@ text = "CONTROLS"
 fit_content = true
 horizontal_alignment = 1
 
-[node name="CloseControls" type="Button" parent="Controls" unique_id=1023941353]
+[node name="CloseControls" type="Button" parent="ControlsPanel" unique_id=1023941353]
 layout_mode = 0
 offset_left = 628.0
 offset_top = 8.0
@@ -88,7 +94,7 @@ theme_override_fonts/font = ExtResource("3_hafda")
 theme_override_font_sizes/font_size = 70
 text = "X"
 
-[node name="MarginContainer" type="MarginContainer" parent="Controls" unique_id=658808517]
+[node name="MarginContainer" type="MarginContainer" parent="ControlsPanel" unique_id=658808517]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -101,16 +107,16 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Controls/MarginContainer" unique_id=1858219367]
+[node name="ScrollContainer" type="ScrollContainer" parent="ControlsPanel/MarginContainer" unique_id=1858219367]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Controls/MarginContainer/ScrollContainer" unique_id=868810408]
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlsPanel/MarginContainer/ScrollContainer" unique_id=868810408]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Minigame1" type="RichTextLabel" parent="Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=487034459]
+[node name="Minigame1" type="RichTextLabel" parent="ControlsPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=487034459]
 clip_contents = false
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("4_tpml5")
@@ -119,17 +125,17 @@ text = "Minigame 1"
 fit_content = true
 horizontal_alignment = 1
 
-[node name="Minigame1Controls" type="RichTextLabel" parent="Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=311999264]
+[node name="Minigame1Controls" type="RichTextLabel" parent="ControlsPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=311999264]
 clip_contents = false
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_jqemp")
 theme_override_font_sizes/normal_font_size = 26
-text = "Left -  W or left (Physical)
-Right - D or right (Physical)
+text = "Left -  W or left arrow key
+Right - D or right arrow key
 Jump - Space"
 fit_content = true
 
-[node name="Minigame2" type="RichTextLabel" parent="Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1412087593]
+[node name="Minigame2" type="RichTextLabel" parent="ControlsPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1412087593]
 clip_contents = false
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("4_tpml5")
@@ -138,7 +144,7 @@ text = "Minigame 2"
 fit_content = true
 horizontal_alignment = 1
 
-[node name="Minigame2Controls" type="RichTextLabel" parent="Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1096787236]
+[node name="Minigame2Controls" type="RichTextLabel" parent="ControlsPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1096787236]
 clip_contents = false
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_jqemp")
@@ -146,7 +152,7 @@ theme_override_font_sizes/normal_font_size = 26
 text = "Click Button - Left Mouse Button (LMB)"
 fit_content = true
 
-[node name="Minigame3" type="RichTextLabel" parent="Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1548965595]
+[node name="Minigame3" type="RichTextLabel" parent="ControlsPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1548965595]
 clip_contents = false
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("4_tpml5")
@@ -155,15 +161,198 @@ text = "Minigame 3"
 fit_content = true
 horizontal_alignment = 1
 
-[node name="Minigame3Controls" type="RichTextLabel" parent="Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2136184495]
+[node name="Minigame3Controls" type="RichTextLabel" parent="ControlsPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2136184495]
 clip_contents = false
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_jqemp")
 theme_override_font_sizes/normal_font_size = 26
-text = "Use Racket - Left Mouse Button (LMB)"
+text = "Move racket - Mouse
+Use Racket - Left Mouse Button (LMB)"
+fit_content = true
+
+[node name="Minigame4" type="RichTextLabel" parent="ControlsPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1586444095]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_tpml5")
+theme_override_font_sizes/normal_font_size = 39
+text = "Minigame 4"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Minigame4Controls" type="RichTextLabel" parent="ControlsPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=97660909]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_jqemp")
+theme_override_font_sizes/normal_font_size = 26
+text = "Move cup left - A or left arrow key
+Move cup right - D or right arrow key"
+fit_content = true
+
+[node name="Minigame5" type="RichTextLabel" parent="ControlsPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=910520010]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_tpml5")
+theme_override_font_sizes/normal_font_size = 39
+text = "Minigame 5"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Minigame5Controls" type="RichTextLabel" parent="ControlsPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=942478046]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_jqemp")
+theme_override_font_sizes/normal_font_size = 26
+text = "Control shield - mouse"
+fit_content = true
+
+[node name="HowToPlayPanel" type="Panel" parent="." unique_id=625763987]
+visible = false
+offset_left = 222.0
+offset_top = 117.0
+offset_right = 932.0
+offset_bottom = 561.0
+
+[node name="ColorRect" type="ColorRect" parent="HowToPlayPanel" unique_id=402904452]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="title" type="RichTextLabel" parent="HowToPlayPanel" unique_id=617978865]
+clip_contents = false
+layout_mode = 0
+offset_right = 710.0
+offset_bottom = 84.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("3_hafda")
+theme_override_font_sizes/normal_font_size = 90
+text = "HOW TO PLAY"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="CloseHowToPlay" type="Button" parent="HowToPlayPanel" unique_id=449346452]
+layout_mode = 0
+offset_left = 628.0
+offset_top = 8.0
+offset_right = 702.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("3_hafda")
+theme_override_font_sizes/font_size = 70
+text = "X"
+
+[node name="MarginContainer" type="MarginContainer" parent="HowToPlayPanel" unique_id=1498684962]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HowToPlayPanel/MarginContainer" unique_id=1069626637]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HowToPlayPanel/MarginContainer/ScrollContainer" unique_id=2107089647]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Minigame1" type="RichTextLabel" parent="HowToPlayPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1181842619]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_tpml5")
+theme_override_font_sizes/normal_font_size = 39
+text = "Minigame 1"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Minigame1Instructions" type="RichTextLabel" parent="HowToPlayPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=738046931]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_jqemp")
+theme_override_font_sizes/normal_font_size = 26
+text = "Move the character and collect all 3 garlics before the timer ends."
+fit_content = true
+
+[node name="Minigame2" type="RichTextLabel" parent="HowToPlayPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1051852882]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_tpml5")
+theme_override_font_sizes/normal_font_size = 39
+text = "Minigame 2"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Minigame2Instructions" type="RichTextLabel" parent="HowToPlayPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1752994171]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_jqemp")
+theme_override_font_sizes/normal_font_size = 26
+text = "Click all garlic buttons."
+fit_content = true
+
+[node name="Minigame3" type="RichTextLabel" parent="HowToPlayPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1428260735]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_tpml5")
+theme_override_font_sizes/normal_font_size = 39
+text = "Minigame 3"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Minigame3Instructions" type="RichTextLabel" parent="HowToPlayPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=497964288]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_jqemp")
+theme_override_font_sizes/normal_font_size = 26
+text = "Swat all flies using the racket"
+fit_content = true
+
+[node name="Minigame4" type="RichTextLabel" parent="HowToPlayPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=986062172]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_tpml5")
+theme_override_font_sizes/normal_font_size = 39
+text = "Minigame 4"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Minigame4Instructions" type="RichTextLabel" parent="HowToPlayPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1490939867]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_jqemp")
+theme_override_font_sizes/normal_font_size = 26
+text = "Move the cup right or left. Rocks will fall from above. If they fall into the cup, they slightly tilt the cup. If the cup tilts too much, the water will spill, ending the minigame."
+fit_content = true
+
+[node name="Minigame5" type="RichTextLabel" parent="HowToPlayPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=675772268]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_tpml5")
+theme_override_font_sizes/normal_font_size = 39
+text = "Minigame 5"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Minigame5Instructions" type="RichTextLabel" parent="HowToPlayPanel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1520772504]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_jqemp")
+theme_override_font_sizes/normal_font_size = 26
+text = "Protect the egg from incoming projectiles using the mouse controlled shield."
 fit_content = true
 
 [connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Buttons/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Buttons/HowToPlay" to="." method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Controls/CloseControls" to="." method="_on_close_controls_pressed"]
+[connection signal="pressed" from="ControlsPanel/CloseControls" to="." method="_on_close_controls_pressed"]
+[connection signal="pressed" from="HowToPlayPanel/CloseHowToPlay" to="." method="_on_close_how_to_play_pressed"]

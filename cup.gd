@@ -10,7 +10,7 @@ var spill_limit := 0.7
 var spilled := false
 
 func _process(delta):
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("left", "right")
 	position.x += direction * speed * delta
 	position.x = clamp(position.x, 100.0, 1080.0)
 	rotation = lerp_angle(rotation, 0.0, recovery_speed * delta)
@@ -24,7 +24,6 @@ func _process(delta):
 
 	if spill_timer >= spill_limit:
 		spilled = true
-		print("SPILLED!")
 		Spilled.emit()
 
 func hit(direction):

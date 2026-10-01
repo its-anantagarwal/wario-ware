@@ -10,11 +10,8 @@ func _ready():
 
 func _process(delta: float):
 	var cup = get_parent()
-
-	# Water wants to stay horizontal on the screen.
 	var target_angle: float = -cup.rotation
 
-	# Water has inertia.
 	water_angle = lerp_angle(
 		water_angle,
 		target_angle,
@@ -37,11 +34,9 @@ func update_water():
 		original_points[1].y
 	) / 2.0
 
-	# Move ONLY the top edge.
 	points[0].y = surface_y + tan(water_angle) * (left_x - center_x)
 	points[1].y = surface_y + tan(water_angle) * (right_x - center_x)
 
-	# Bottom stays fixed.
 	points[2] = original_points[2]
 	points[3] = original_points[3]
 
