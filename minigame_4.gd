@@ -29,7 +29,7 @@ func spawn_object():
 
 func _process(delta: float) -> void:
 	if timer_end:
-		if Global.minigames_done>4:
+		if Global.minigames_done>5:
 			get_tree().change_scene_to_file("res://done_screen.tscn")
 		else:
 			get_tree().change_scene_to_file("res://level_scene.tscn")

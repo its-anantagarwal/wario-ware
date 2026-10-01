@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c7n3j03u50t1t" path="res://egg.png" id="2_o0t2h"]
 [ext_resource type="Texture2D" uid="uid://c1pxxlo7oeomn" path="res://shield.png" id="3_1bf3g"]
 [ext_resource type="Script" uid="uid://b6d5nm2ge0ytj" path="res://shield.gd" id="3_oyiys"]
+[ext_resource type="PackedScene" uid="uid://bftsqahqticxe" path="res://minigame_timer.tscn" id="6_7hn4c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0vdtu"]
 texture = ExtResource("1_b3dkm")
@@ -95,6 +96,7 @@ tile_set = SubResource("TileSet_j0tas")
 [node name="Egg" type="Area2D" parent="." unique_id=550773996]
 position = Vector2(561, 329)
 scale = Vector2(4.119999, 4.119999)
+collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Egg" unique_id=1657866678]
 texture = ExtResource("2_o0t2h")
@@ -119,5 +121,9 @@ shape = SubResource("CircleShape2D_0htby")
 wait_time = 1.2
 autostart = true
 
+[node name="MinigameTimer" parent="." unique_id=1744183757 instance=ExtResource("6_7hn4c")]
+position = Vector2(53, 44)
+
+[connection signal="area_entered" from="Egg" to="." method="_on_egg_area_entered"]
 [connection signal="area_entered" from="Shield" to="Shield" method="_on_area_entered"]
 [connection signal="timeout" from="rockTimer" to="." method="_on_rock_timer_timeout"]
